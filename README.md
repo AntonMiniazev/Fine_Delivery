@@ -4,13 +4,15 @@
   <img src="https://github.com/AntonMiniazev/Fine_Delivery/blob/main/other/data-pipeline-architecture-purpose.jpg" />
 </p>
 
-**Description:** This project involves the development of an automated dashboard for an online retail company, designed to monitor key sales metrics by delivery zones. 
+Hi! We are Fine Delivery, not good and not bad! And we don't actually exist.
+This project was created as a part of my preparation to pass Microsoft PL-300 certification (success!), because I truly believe that practice is a key to the best understanding.
+Result is here: [Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
+
+**Description:** The project involves the development of an automated dashboard for an online retail company (Fine Delivery), designed to monitor key sales metrics by delivery zones. 
 We will simplify the pipeline preparation process for the online retail store utilizing the following tools:
 - PostgreSQL database (Amazon RDS)
 - Airflow (Amazon EC2)
 - Power BI
-
-[Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
 
 **Main Task:** The primary goal is to create Power BI reports that provide a simplified business overview focusing on sales metrics and basket analysis.
 
