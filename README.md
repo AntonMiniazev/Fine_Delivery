@@ -32,7 +32,7 @@ Tables in PostgreSQL database are created using [Database_initialization.ipynb](
 
 **DAG 1:** To go as a live service, new order creation is needed. For these purposes we create a DAG that generates random orders and uploads them every week to our DB.
 
-Script for this process: [DAG 1](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy.py)
+Script for this process: [DAG 1](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_load_order_data-master.py)
 
 **DAG 2:** Initial tables in database will be reprocessed into the Proposed table by Airflow. 
 Process requirements:
