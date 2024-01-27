@@ -29,7 +29,7 @@ All sourcing data tables are stored in csv files in folder [initial_data](https:
 # Step 2. Creating Database
 
 Setup PostgreSQL database on Amazon RDS, free tier is enough for our aims. 
-Tables in PostgreSQL database are created using [Database_initialization.ipynb](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/project_notebooks/Database_initialization_RDS-master.ipynb).
+Tables in PostgreSQL database are created using [Database_initialization_RDS-master.ipynb](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/project_notebooks/Database_initialization_RDS-master.ipynb).
 
 # Step 3. Creating DAG
 
