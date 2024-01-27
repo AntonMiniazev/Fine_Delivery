@@ -5,7 +5,8 @@
 </p>
 
 Hi! We are Fine Delivery, not good and not bad! And we don't actually exist.
-This project was created as a part of my preparation to pass Microsoft PL-300 certification (success!), because I truly believe that practice is a key to the best understanding.
+This project was created as a part of my preparation to pass [initial_data](https://learn.microsoft.com/en-us/credentials/certifications/exams/pl-300/) (success!), because I truly believe that practice is a key to the best understanding.
+
 Result is here: [Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
 
 **Description:** The project involves the development of an automated dashboard for an online retail company (Fine Delivery), designed to monitor key sales metrics by delivery zones. 
