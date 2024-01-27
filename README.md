@@ -16,3 +16,27 @@ We will simplify the pipeline preparation process for the online retail store ut
 <p align="center">
   <img src="https://lucid.app/publicSegments/view/3564fc0c-9ef3-44a1-ba8b-819ac82206d3/image.png" />
 </p>
+
+# Step 1. Preparing Data
+
+Orders and sale details (tables Orders and Products) are generated using script [Order_generator.ipynb](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/project_notebooks/Order_generator.ipynb).
+Other tables include delivery information, associated with the order completion expenses.
+All sourcing data tables are stored in csv files in folder [initial_data](https://github.com/AntonMiniazev/Fine_Delivery/tree/main/project_notebooks)
+
+# Step 2. Creating Database
+
+Setup PostgreSQL database on Amazon RDS, free tier is enough for our aims. 
+Tables in PostgreSQL database are created using [Database_initialization.ipynb](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/project_notebooks/Database_initialization.ipynb).
+
+# Step 3. Creating DAG
+
+To go as a live service, new order creation is needed. For these purposes we create a DAG that generates random orders.
+Script for this process: [DAG](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy.py)
+
+Initial tables in database will be reprocessed into the Proposed table by Airflow. 
+Process requirements:
+- Scheduled daily to maintain up-to-date the Proposed table.
+- Combine data from initial tables for orders from previous two days.
+- Insert combined data into the Proposed table with specifics from **Data Description**.
+
+Script for this process: [DAG](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy-master.py)
