@@ -1,4 +1,5 @@
 # Project Overview:
+
 <p align="center">
   <img src="https://github.com/AntonMiniazev/Fine_Delivery/blob/main/other/data-pipeline-architecture-purpose.jpg" />
 </p>
@@ -8,6 +9,8 @@ We will simplify the pipeline preparation process for the online retail store ut
 - PostgreSQL database (Amazon RDS)
 - Airflow (Amazon EC2)
 - Power BI
+
+[Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
 
 **Main Task:** The primary goal is to create Power BI reports that provide a simplified business overview focusing on sales metrics and basket analysis.
 
@@ -41,3 +44,11 @@ Process requirements:
 - Insert combined data into the Proposed table with specifics from **Data Description**.
 
 Script for this process: [DAG 2](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy-master.py)
+
+# Step 4. Visualization in Power BI
+
+Connecting Power BI to our DB using PostrgreSQL connection. After that all our tables are available with existing relationships.
+Final report is published using https://www.novypro.com service.
+
+[Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
+
