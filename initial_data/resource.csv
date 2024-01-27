@@ -1,0 +1,10 @@
+﻿resource_id;store_id;resource_type;resource_type_id;cost
+1;1;Car_courier;1;305
+2;1;Bike_courier;2;190
+3;1;Store_picker;3;19
+4;2;Car_courier;1;310
+5;2;Bike_courier;2;180
+6;2;Store_picker;3;21
+7;3;Car_courier;1;340
+8;3;Bike_courier;2;215
+9;3;Store_picker;3;27
