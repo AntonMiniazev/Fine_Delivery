@@ -33,7 +33,23 @@ All sourcing data tables are stored in csv files in folder [initial_data](https:
 Setup PostgreSQL database on Amazon RDS, free tier is enough for our aims. 
 Tables in PostgreSQL database are created using [Database_initialization_RDS-master.ipynb](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/project_notebooks/Database_initialization_RDS-master.ipynb).
 
-# Step 3. Creating DAG
+# Step 3. Airflow instance
+
+To manage Airflow Amazon EC2 service was chosen. Deployed t3.micro instance (free tier) with Ubuntu. 
+Unfortunately, t3.micro provides limited memory to manage Airflow with PostgreSQL DB as metadata DB, but **Swap Memory** saved the day:
+```console
+sudo fallocate -l 4G /swapfile
+sudo dd if=/dev/zero of=/swapfile bs=1M count=4096
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+cat /proc/sys/vm/swappiness
+sudo sysctl vm.swappiness=10
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+```
+
+# Step 4. Creating DAG
 
 **DAG 1:** To go as a live service, new order creation is needed. For these purposes we create a DAG that generates random orders and uploads them every week to our DB.
 
@@ -47,7 +63,7 @@ Process requirements:
 
 Script for this process: [DAG 2](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy-master.py)
 
-# Step 4. Visualization in Power BI
+# Step 5. Visualization in Power BI
 
 Connecting Power BI to our DB using PostrgreSQL connection. After that all our tables are available with existing relationships.
 Final report is published using https://www.novypro.com service.
