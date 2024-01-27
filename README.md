@@ -30,9 +30,9 @@ Tables in PostgreSQL database are created using [Database_initialization.ipynb](
 
 # Step 3. Creating DAG
 
-**DAG 1:** To go as a live service, new order creation is needed. For these purposes we create a DAG that generates random orders.
+**DAG 1:** To go as a live service, new order creation is needed. For these purposes we create a DAG that generates random orders and uploads them every week to our DB.
 
-Script for this process: [DAG](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy.py)
+Script for this process: [DAG 1](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy.py)
 
 **DAG 2:** Initial tables in database will be reprocessed into the Proposed table by Airflow. 
 Process requirements:
@@ -40,4 +40,4 @@ Process requirements:
 - Combine data from initial tables for orders from previous two days.
 - Insert combined data into the Proposed table with specifics from **Data Description**.
 
-Script for this process: [DAG](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy-master.py)
+Script for this process: [DAG 2](https://github.com/AntonMiniazev/Fine_Delivery/blob/main/DAGs/dag_zone_economy-master.py)
