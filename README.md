@@ -11,8 +11,8 @@ Result is here: [Final report](https://www.novypro.com/project/fine-delivery-das
 
 **Description:** The project involves the development of an automated dashboard for an online retail company (Fine Delivery), designed to monitor key sales metrics by delivery zones. 
 We will simplify the pipeline preparation process for the online retail store utilizing the following tools:
-- PostgreSQL database (Amazon RDS)
-- Airflow (Amazon EC2)
+- PostgreSQL database (Azure Database for PostgreSQL)
+- Airflow (Azure VM)
 - Power BI
 
 **Main Task:** The primary goal is to create Power BI reports that provide a simplified business overview focusing on sales metrics and basket analysis.
@@ -36,8 +36,8 @@ Tables in PostgreSQL database are created using [Database_initialization_RDS-mas
 
 # Step 3. Airflow instance
 
-To manage Airflow Amazon EC2 service was chosen. Deployed t3.micro instance (free tier) with Ubuntu. 
-Unfortunately, t3.micro provides limited memory to manage Airflow with PostgreSQL DB as metadata DB, but **Swap Memory** saved the day:
+To manage Airflow we choose Azure VM service. Deployed B1s size (free tier) with Ubuntu 22.04. 
+Unfortunately, B1s provides limited memory to manage Airflow with PostgreSQL DB as metadata DB, but **Swap Memory** saved the day:
 ```console
 sudo fallocate -l 4G /swapfile
 sudo dd if=/dev/zero of=/swapfile bs=1M count=4096
