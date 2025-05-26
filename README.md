@@ -3,8 +3,6 @@
 Hi! We are Fine Delivery, not good and not bad! And we don't actually exist.
 This project was created as a part of my preparation to pass [Microsoft PL-300 certification](https://learn.microsoft.com/en-us/credentials/certifications/exams/pl-300/) (success!), because I truly believe that practice is a key to the best understanding.
 
-Result is here: [Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
-
 <p align="center">
   <img src="https://github.com/AntonMiniazev/Fine_Delivery/blob/main/other/Fine_Delivery_Logo.png" />
 </p>
