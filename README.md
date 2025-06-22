@@ -65,7 +65,5 @@ Script for this process: [DAG 2](https://github.com/AntonMiniazev/Fine_Delivery/
 # Step 5. Visualization in Power BI
 
 Connecting Power BI to our DB using PostrgreSQL connection. After that all our tables are available with existing relationships.
-Final report is published using https://www.novypro.com service.
-
-[Final report](https://www.novypro.com/project/fine-delivery-dashboard-power-bi)
+Final report is published using https://www.novypro.com service [Closed after Azure free tier subscription ending]. Power BI report is available in repo.
 
